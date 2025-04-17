@@ -26,7 +26,7 @@ function App() {
      task="Earn, Build, Repeat!"
      description="Keep grinding, be an entrepreneur!"
      />
-     {/* <Popup /> */}
+     <Popup spanTitle="Are you really sure??"/>
     </>
   )
 }
@@ -37,3 +37,5 @@ export default App
 // used to display dynamic data in your components
 // Pass in a property name and value like : <Todo task="Learn Basics of React" />
 // Accept the property component name inside of the parameter
+// to create multiple props: just add a space like how you add attributes in html
+// if your prop is a number you can use {} curly brackets

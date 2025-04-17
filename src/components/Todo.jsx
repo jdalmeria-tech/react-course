@@ -16,3 +16,5 @@ export default Todo
 // function Todo({ task })
 // use the property like this:
 // <h2>{ task }</h2>
+// to add multiple properties, accept the props: function Todo({ task, description })
+// use it just like how you use the first prop you made
