@@ -8,8 +8,8 @@ function Popup () {
         <button className="popup__btn">Confirm</button>
         <button className="popup__btn popup__btn--cancel">Cancel</button>
       </div>
-     </div>
-     <div className="backdrop"></div>
+    </div>
+    <div className="backdrop"></div>
     </>
   )
 }
