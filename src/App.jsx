@@ -10,13 +10,18 @@ function App() {
   return (
     <>
      <TodoTitle />
-     <Todo />
-     <Todo />
-     <Todo />
-     <Todo />
-     <Popup />
+     <Todo task="Learn Basics of React" />
+     <Todo task="Learn Basics of Next.js" />
+     <Todo task="Create a Start-up WebApp" />
+     <Todo task="Earn, Build, Repeat!"/>
+     {/* <Popup /> */}
     </>
   )
 }
 
 export default App
+
+// to create Props
+// used to display dynamic data in your components
+// assign a variable
+// you can use destructuring for better code as you pass it in your component

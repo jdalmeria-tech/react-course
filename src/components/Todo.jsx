@@ -1,9 +1,8 @@
-function Todo() {
-
+function Todo({ task }) {
   return (
     <>
      <div className="todo-item">
-      <h2>To do Item</h2>
+      <h2>{ task }</h2>
       <button>Delete</button>
      </div>
     </>
