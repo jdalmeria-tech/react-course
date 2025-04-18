@@ -10,21 +10,23 @@ function App() {
   return (
     <>
      <TodoTitle />
+     <div>
+      <input type="text" onChange={(event) => {
+        console.log(event.target.value)
+      }}/>
+      <button>Add to do</button>
+     </div>
      <Todo
      task="Learn Basics of React"
-     description="3hrs everyday"
      />
      <Todo
      task="Learn Basics of Next.js"
-     description="4hrs everyday"
      />
      <Todo
      task="Create a Start-up WebApp"
-     description="Build the Bridgr App"
      />
      <Todo
      task="Earn, Build, Repeat!"
-     description="Keep grinding, be an entrepreneur!"
      />
      <Popup spanTitle="Are you really sure??"/>
     </>
