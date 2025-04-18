@@ -43,5 +43,6 @@ export default App
 // to create multiple props: just add a space like how you add attributes in html
 // if your prop is a number you can use {} curly brackets
 
+// learning Hooks
 // this is a longer code: { popUp ? <Popup spanTitle="Are you really sure??"/> : null }
 // this is a shorter one: { popUp && <Popup spanTitle="Are you really sure??"/> }
