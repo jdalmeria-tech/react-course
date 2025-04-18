@@ -2,12 +2,13 @@ import './App.css'
 import Todo from './components/Todo.jsx'
 import TodoTitle from './components/TodoTitle.jsx'
 import Popup from './components/Popup.jsx'
+import { useState } from 'react'
 
 
 
 function App() {
-  let popupOpen = false
-
+  const [popupOpen, setPopupOpen] =  useState(false)
+  // it's like saying popupOpen = false
   return (
     <>
      <TodoTitle />
@@ -15,7 +16,7 @@ function App() {
       <input type="text" onChange={(event) => {
         console.log(event.target.value)
       }}/>
-      <button>Add to do</button>
+      <button onClick={() => setPopupOpen(true)}>Add to do</button>
      </div>
      <Todo
      task="Learn Basics of React"
