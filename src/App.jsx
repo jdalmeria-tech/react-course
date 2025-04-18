@@ -6,6 +6,7 @@ import Popup from './components/Popup.jsx'
 
 
 function App() {
+  let popUp = false
 
   return (
     <>
@@ -28,7 +29,7 @@ function App() {
      <Todo
      task="Earn, Build, Repeat!"
      />
-     <Popup spanTitle="Are you really sure??"/>
+     { popUp && <Popup spanTitle="Are you really sure??"/> }
     </>
   )
 }
@@ -41,3 +42,6 @@ export default App
 // Accept the property component name inside of the parameter
 // to create multiple props: just add a space like how you add attributes in html
 // if your prop is a number you can use {} curly brackets
+
+// this is a longer code: { popUp ? <Popup spanTitle="Are you really sure??"/> : null }
+// this is a shorter one: { popUp && <Popup spanTitle="Are you really sure??"/> }
