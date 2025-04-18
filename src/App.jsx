@@ -6,7 +6,7 @@ import Popup from './components/Popup.jsx'
 
 
 function App() {
-  let popUp = false
+  let popupOpen = false
 
   return (
     <>
@@ -29,7 +29,7 @@ function App() {
      <Todo
      task="Earn, Build, Repeat!"
      />
-     { popUp && <Popup spanTitle="Are you really sure??"/> }
+     { popupOpen && <Popup spanTitle="Are you really sure??"/> }
     </>
   )
 }
