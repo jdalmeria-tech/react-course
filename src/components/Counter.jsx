@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function Counter() {
+  // objects
   const [user, setUser] = useState({ name: "JD", age: 25 });
 
   return (
