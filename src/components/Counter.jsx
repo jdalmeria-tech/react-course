@@ -11,6 +11,9 @@ function Counter() {
         </h1>
         <button
           onClick={() => {
+          // 1. use a callback function within setState to access the previous value
+          // 2. spread all the properties of the previous object into the new obj "...prevUser,"
+          // 3. change the property that you want or need to change
             setUser((prevUser) => ({
               ...prevUser,
               age: prevUser.age + 1,
