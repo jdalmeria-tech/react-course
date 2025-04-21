@@ -8,11 +8,7 @@ import { useState } from 'react'
 
 
 function App() {
-
-
-
-  return <Counter />
-
+  
   const [popupOpen, setPopupOpen] =  useState(false)
   // it's like saying popupOpen = false
   return (
