@@ -1,41 +1,32 @@
 import { useState } from "react";
 
 function Counter() {
-  // objects
-  const [user, setUser] = useState({ name: "JD", age: 25 });
+  // arrays
+  const [array, setArray] = useState([]);
 
   return (
     <>
       <div className="counter">
-        <h1>
-          Counter: {user.age} {user.name}
-        </h1>
+        <h1>{array.toString()}</h1>
         <button
           onClick={() => {
-          // 1. use a callback function within setState to access the previous value
-          // 2. spread all the properties of the previous object into the new obj "...prevUser,"
-          // 3. change the property that you want or need to change
-            setUser((prevUser) => ({
-              ...prevUser,
-              age: prevUser.age + 1,
-            }));
+            setArray((prevArray) => [...prevArray, "+1"]);
           }}
         >
           Increment
         </button>
+
         <button
           onClick={() => {
-            setUser((prevUser) => ({
-              ...prevUser,
-              age: prevUser.age - 1,
-            }));
+            setArray((prevArray) => [...prevArray, "-1"]);
           }}
         >
           Decrement
         </button>
+
         <button
           onClick={() => {
-            setUser((prevUser) => ({ ...prevUser, age: 25 }));
+            setArray([]);
           }}
         >
           Reset
