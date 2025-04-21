@@ -20,13 +20,23 @@ function Counter () {
           Increment
         </button>
         <button onClick={() => {
-          setCount((prevCount) => prevCount - 1);
-          setCount((prevCount) => prevCount - 1);
+          setUser((prevUser) => ({
+            ...prevUser,
+            age: prevUser.age - 1,
+          }));
          }}
         >
           Decrement
         </button>
-        <button onClick={() => setCount(0)}>Reset</button>
+        <button onClick={() => {
+          setUser((prevUser) => ({
+            ...prevUser,
+            age: 25,
+          }));
+         }}
+        >
+          Reset
+        </button>
       </div>
     </>
   )
