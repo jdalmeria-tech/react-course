@@ -1,48 +1,47 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function Counter () {
-  const [user, setUser] = useState({ name:"JD", age: 25 });
+function Counter() {
+  const [user, setUser] = useState({ name: "JD", age: 25 });
 
-  return(
+  return (
     <>
       <div className="counter">
         <h1>
           Counter: {user.age} {user.name}
         </h1>
         <button
-         onClick={() => {
-          setUser((prevUser) => ({
-            ...prevUser,
-            age: prevUser.age + 1,
-          }));
-         }}
+          onClick={() => {
+            setUser((prevUser) => ({
+              ...prevUser,
+              age: prevUser.age + 1,
+            }));
+          }}
         >
           Increment
         </button>
-        <button onClick={() => {
-          setUser((prevUser) => ({
-            ...prevUser,
-            age: prevUser.age - 1,
-          }));
-         }}
+        <button
+          onClick={() => {
+            setUser((prevUser) => ({
+              ...prevUser,
+              age: prevUser.age - 1,
+            }));
+          }}
         >
           Decrement
         </button>
-        <button onClick={() => {
-          setUser((prevUser) => ({
-            ...prevUser,
-            age: 25,
-          }));
-         }}
+        <button
+          onClick={() => {
+            setUser((prevUser) => ({ ...prevUser, age: 25 }));
+          }}
         >
           Reset
         </button>
       </div>
     </>
-  )
+  );
 }
 
-export default Counter
+export default Counter;
 
 // using callback functions since new state depends on the previous state (:
 // see notes on notion: https://www.notion.so/12076341f38c80d4a152ded1b7f40060?v=12076341f38c81d5833a000cdbda2594&p=1dc76341f38c801ebf40c1bd9a745c53&pm=s
