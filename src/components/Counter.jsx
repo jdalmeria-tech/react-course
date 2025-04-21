@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 function Counter () {
-  const [user, setUser] = useState({ name:"JD", age: 25 })
+  const [user, setUser] = useState({ name:"JD", age: 25 });
 
   return(
     <>
@@ -13,7 +13,7 @@ function Counter () {
          onClick={() => {
           setUser((prevUser) => ({
             ...prevUser,
-            age: 26,
+            age: prevUser.age + 1,
           }));
          }}
         >
