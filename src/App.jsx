@@ -8,9 +8,19 @@ import { useState } from 'react'
 
 
 function App() {
-  
-  const [popupOpen, setPopupOpen] =  useState(false)
+
+  const [popupOpen, setPopupOpen] =  useState(false);
   // it's like saying popupOpen = false
+
+  function togglePopup() {
+    setPopupOpen(true);
+    console.log('parent notified!');
+  }
+
+  function closePopup() {
+    setPopupOpen(false)
+  }
+
   return (
     <>
      <TodoTitle />
@@ -22,17 +32,21 @@ function App() {
      </div>
      <Todo
      task="Learn Basics of React"
+     togglePopup = {togglePopup}
      />
      <Todo
      task="Learn Basics of Next.js"
+     togglePopup = {togglePopup}
      />
      <Todo
      task="Create a Start-up WebApp"
+     togglePopup = {togglePopup}
      />
      <Todo
      task="Earn, Build, Repeat!"
+     togglePopup = {togglePopup}
      />
-     { popupOpen && <Popup spanTitle="Are you really sure??"/> }
+     { popupOpen && <Popup closePopup = {closePopup} spanTitle="Are you really sure??"/> }
     </>
   )
 }

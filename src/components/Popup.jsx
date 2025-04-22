@@ -1,10 +1,6 @@
-function Popup ({ spanTitle }) {
+function Popup ({ spanTitle, closePopup }) {
   function confirmHandler() {
     console.log('confirm button clicked');
-  }
-
-  function cancelHandler() {
-    console.log('cancel button clicked');
   }
 
   return(
@@ -13,7 +9,7 @@ function Popup ({ spanTitle }) {
         <span>{ spanTitle }</span>
         <div className="popup__btns">
           <button className="popup__btn" onClick={() => confirmHandler()}>Confirm</button>
-          <button className="popup__btn popup__btn--cancel" onClick={() => cancelHandler()}>Cancel</button>
+          <button className="popup__btn popup__btn--cancel" onClick={() => closePopup()}>Cancel</button>
         </div>
       </div>
       <div className="backdrop"></div>
