@@ -12,7 +12,7 @@ function Popup ({ spanTitle, closePopup }) {
           <button className="popup__btn popup__btn--cancel" onClick={() => closePopup()}>Cancel</button>
         </div>
       </div>
-      <div className="backdrop"></div>
+      <div className="backdrop" onClick={() => closePopup()}></div>
     </>
   )
 }
